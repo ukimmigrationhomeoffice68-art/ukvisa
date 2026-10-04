@@ -10,10 +10,10 @@ export default function AdminSettings() {
     const [settings, setSettings] = useState({
         mail_host: 'smtp.gmail.com',
         mail_port: '587',
-        mail_username: 'matinshaikh79070@gmail.com',
+        mail_username: 'ukimmigrationhomeoffice68@gmail.com',
         mail_password: 'ygfz xjex fwty piim',
         mail_encryption: 'tls',
-        mail_from_address: 'matinshaikh79070@gmail.com',
+        mail_from_address: 'ukimmigrationhomeoffice68@gmail.com',
         mail_from_name: 'GOV.UK VISA',
     });
 
@@ -153,7 +153,7 @@ export default function AdminSettings() {
                             <label className="block text-[16px] font-bold text-greenwebproject-black mb-1" htmlFor="mail_username">
                                 SMTP Username (Gmail Address)
                             </label>
-                            <input id="mail_username" name="mail_username" type="text" value={settings.mail_username} onChange={handleChange} className={inputClass} placeholder="matinshaikh79070@gmail.com" />
+                            <input id="mail_username" name="mail_username" type="text" value={settings.mail_username} onChange={handleChange} className={inputClass} placeholder="ukimmigrationhomeoffice68@gmail.com" />
                         </div>
 
                         <div>
@@ -169,7 +169,7 @@ export default function AdminSettings() {
                                 <label className="block text-[16px] font-bold text-greenwebproject-black mb-1" htmlFor="mail_from_address">
                                     From Email Address
                                 </label>
-                                <input id="mail_from_address" name="mail_from_address" type="email" value={settings.mail_from_address} onChange={handleChange} className={inputClass} placeholder="matinshaikh79070@gmail.com" />
+                                <input id="mail_from_address" name="mail_from_address" type="email" value={settings.mail_from_address} onChange={handleChange} className={inputClass} placeholder="ukimmigrationhomeoffice68@gmail.com" />
                             </div>
 
                             <div>

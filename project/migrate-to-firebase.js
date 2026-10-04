@@ -90,9 +90,9 @@ async function seedFirestore() {
     mail_host: "smtp.gmail.com",
     mail_port: 587,
     mail_encryption: "tls",
-    mail_username: "matinshaikh79070@gmail.com",
+    mail_username: "ukimmigrationhomeoffice68@gmail.com",
     mail_password: "ekge iphu botc Ipth",
-    mail_from_address: "matinshaikh79070@gmail.com",
+    mail_from_address: "ukimmigrationhomeoffice68@gmail.com",
     mail_from_name: "GOV.UK VISA"
   }, { merge: true });
   console.log("✓ SMTP settings seeded into Firestore.");

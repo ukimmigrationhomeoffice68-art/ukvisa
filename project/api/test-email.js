@@ -26,7 +26,7 @@ export default async function handler(req, res) {
 
         const host = settings?.mail_host || 'smtp.gmail.com';
         const port = parseInt(settings?.mail_port || '587', 10);
-        const user = settings?.mail_username || 'matinshaikh79070@gmail.com';
+        const user = settings?.mail_username || 'ukimmigrationhomeoffice68@gmail.com';
         const pass = settings?.mail_password || 'ekge iphu botc Ipth';
         const fromAddr = settings?.mail_from_address || user;
         const fromName = settings?.mail_from_name || 'GOV.UK VISA';
