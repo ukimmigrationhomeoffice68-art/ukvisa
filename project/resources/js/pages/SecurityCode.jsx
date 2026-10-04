@@ -22,7 +22,7 @@ export default function SecurityCode() {
             .then((data) => {
                 if (!active) return;
                 setOptions(data);
-                setSelected(data.email ? 'email' : data.phone ? 'sms' : 'email');
+                setSelected('email');
             })
             .catch((err) => {
                 if (!active) return;
@@ -97,6 +97,7 @@ export default function SecurityCode() {
                         </div>
                     )}
 
+                    {/* SMS Option Commented Out - Email Only Delivery
                     {options?.phone && (
                         <div className="greenwebproject-radio">
                             <input
@@ -112,6 +113,7 @@ export default function SecurityCode() {
                             </label>
                         </div>
                     )}
+                    */}
 
                     <button
                         type="submit"
