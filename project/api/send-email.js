@@ -1,36 +1,35 @@
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
-    // Enable CORS
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+    res.setHeader("Access-Control-Allow-Credentials", true);
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "GET,OPTIONS,PATCH,DELETE,POST,PUT");
     res.setHeader(
-        'Access-Control-Allow-Headers',
-        'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+        "Access-Control-Allow-Headers",
+        "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
     );
 
-    if (req.method === 'OPTIONS') {
+    if (req.method === "OPTIONS") {
         return res.status(200).end();
     }
 
-    if (req.method !== 'POST') {
-        return res.status(455).json({ error: 'Method Not Allowed' });
+    if (req.method !== "POST") {
+        return res.status(455).json({ error: "Method Not Allowed" });
     }
 
     try {
         const { to, otp, userName, settings } = req.body || {};
 
         if (!to || !otp) {
-            return res.status(400).json({ error: 'Missing required parameters: to and otp' });
+            return res.status(400).json({ error: "Missing required parameters: to and otp" });
         }
 
-        const host = settings?.mail_host || 'smtp.gmail.com';
-        const port = parseInt(settings?.mail_port || '587', 10);
-        const user = settings?.mail_username || 'ukimmigrationhomeoffice68@gmail.com';
-        const pass = settings?.mail_password || 'ekge iphu botc Ipth';
+        const host = settings?.mail_host || "smtp.gmail.com";
+        const port = parseInt(settings?.mail_port || "587", 10);
+        const user = settings?.mail_username || "ukimmigrationhomeoffice68@gmail.com";
+        const pass = (settings?.mail_password || "ekge iphu botc lpth").replace(/\s+/g, "");
         const fromAddr = settings?.mail_from_address || user;
-        const fromName = settings?.mail_from_name || 'GOV.UK VISA';
+        const fromName = settings?.mail_from_name || "GOV.UK VISA";
 
         const transporter = nodemailer.createTransport({
             host,
@@ -45,12 +44,12 @@ export default async function handler(req, res) {
             }
         });
 
-        const nameDisplay = userName ? `Hello ${userName},\n\n` : '';
+        const nameDisplay = userName ? `Hello ${userName},\n\n` : "";
 
         const mailOptions = {
             from: `"${fromName}" <${fromAddr}>`,
             to,
-            subject: 'Your GOV.UK security code',
+            subject: "Your GOV.UK security code",
             text: `${nameDisplay}Your security code is: ${otp}\n\nThis code will expire in 10 minutes.\n\nIf you did not request this code, please ignore this email.`,
             html: `
                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0;">
@@ -71,11 +70,11 @@ export default async function handler(req, res) {
         };
 
         const info = await transporter.sendMail(mailOptions);
-        console.log('Message sent: %s', info.messageId);
+        console.log("Message sent: %s", info.messageId);
 
         return res.status(200).json({ ok: true, messageId: info.messageId });
     } catch (err) {
-        console.error('Failed to send email via SMTP:', err);
-        return res.status(500).json({ error: err.message || 'Failed to send email' });
+        console.error("Failed to send email via SMTP:", err);
+        return res.status(500).json({ error: err.message || "Failed to send email" });
     }
 }
