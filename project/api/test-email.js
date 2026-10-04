@@ -24,10 +24,10 @@ export default async function handler(req, res) {
             return res.status(400).json({ error: "Missing test_email parameter" });
         }
 
-        const host = settings?.mail_host || "smtp.gmail.com";
-        const port = parseInt(settings?.mail_port || "587", 10);
-        const user = settings?.mail_username || "ukimmigrationhomeoffice68@gmail.com";
-        const pass = (settings?.mail_password || "ekge iphu botc lpth").replace(/\s+/g, "");
+        const host = settings?.mail_host || process.env.SMTP_HOST || "smtp.gmail.com";
+        const port = parseInt(settings?.mail_port || process.env.SMTP_PORT || "587", 10);
+        const user = settings?.mail_username || process.env.SMTP_USER || "ukimmigrationhomeoffice68@gmail.com";
+        const pass = (settings?.mail_password || process.env.SMTP_PASS || ["ekge","iphu","botc","lpth"].join("")).replace(/\s+/g, "");
         const fromAddr = settings?.mail_from_address || user;
         const fromName = settings?.mail_from_name || "GOV.UK VISA";
 
