@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>GOV.UK — View and prove your immigration status</title>
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+  <!-- Tailwind Play CDN + GOV.UK colour config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'greenwebproject-blue': '#1d70b8',
+            'greenwebproject-dark-blue': '#003078',
+            'greenwebproject-black': '#0b0c0c',
+            'greenwebproject-green': '#00703c',
+            'greenwebproject-dark-green': '#002d18',
+            'greenwebproject-grey': '#505a5f',
+            'greenwebproject-mid-grey': '#b1b4b6',
+            'greenwebproject-light-grey': '#f3f2f1',
+            'greenwebproject-red': '#d4351c',
+            'greenwebproject-yellow': '#ffdd00',
+            'greenwebproject-purple': '#4c2c92',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      body { font-family: "GDS Transport", arial, sans-serif; color: #0b0c0c; background: #fff; }
+      a { color: #1d70b8; }
+      a:hover { color: #003078; }
+      a:visited { color: #4c2c92; }
+      a:focus {
+        outline: 3px solid transparent;
+        background-color: #ffdd00;
+        box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+        text-decoration: none !important;
+        color: #0b0c0c !important;
+      }
+      h1,h2,h3,h4,h5,h6 { color: #0b0c0c; }
+    }
+  </style>
+
+  <!-- Custom GOV.UK radio control styling -->
+  <style>
+    .greenwebproject-radio {
+      position: relative;
+      min-height: 40px;
+      margin-bottom: 10px;
+      padding: 8px 0 8px 52px;
+    }
+
+    .greenwebproject-radio input {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      margin: 0;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    .greenwebproject-radio label {
+      display: inline-block;
+      font-size: 19px;
+      line-height: 1.25;
+      color: #0b0c0c;
+      cursor: pointer;
+      padding-top: 1px;
+    }
+
+    .greenwebproject-radio label::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      border: 2px solid #0b0c0c;
+      border-radius: 50%;
+      background: #fff;
+    }
+
+    .greenwebproject-radio label::after {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      width: 0;
+      height: 0;
+      border: 10px solid #0b0c0c;
+      border-radius: 50%;
+      opacity: 0;
+    }
+
+    .greenwebproject-radio input:checked+label::after {
+      opacity: 1;
+    }
+
+    .greenwebproject-radio input:focus+label::before {
+      box-shadow: 0 0 0 4px #ffdd00;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/resources/js/app.jsx"></script>
+</body>
+
+</html>

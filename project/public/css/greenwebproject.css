@@ -1,0 +1,868 @@
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  color: #0b0c0c;
+}
+
+body {
+  margin: 0;
+  background-color: #f3f2f1;
+  color: #0b0c0c;
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+a { color: #1d70b8; }
+a:hover { color: #003078; }
+a:visited { color: #4c2c92; }
+a:focus {
+  outline: 3px solid transparent;
+  background-color: #fd0;
+  box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+  text-decoration: none;
+  color: #0b0c0c;
+}
+
+/* ==================== SKIP LINK ==================== */
+.greenwebproject-skip-link {
+  position: absolute;
+  top: -999px;
+  left: -999px;
+}
+.greenwebproject-skip-link:focus {
+  position: static;
+  display: block;
+  padding: 10px 15px;
+  background: #fd0;
+  color: #0b0c0c;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+/* ==================== HEADER ==================== */
+.greenwebproject-header {
+  font-family: "GDS Transport", arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  border-bottom: 10px solid #003078;
+  color: #ffffff;
+  background: #1d70b8;
+}
+
+.greenwebproject-header__container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 40.0625em) {
+  .greenwebproject-header__container {
+    padding: 0 30px;
+  }
+}
+
+.greenwebproject-header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.greenwebproject-header__link--homepage {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.greenwebproject-header__link--homepage:hover { color: #ffffff; text-decoration: none; }
+.greenwebproject-header__link--homepage:focus { color: #0b0c0c; }
+.greenwebproject-header__link--homepage:visited { color: #ffffff; }
+
+.greenwebproject-header__logotype {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.greenwebproject-logo-dot {
+  fill: #00ffe0;
+}
+
+/* ==================== WIDTH CONTAINER ==================== */
+.greenwebproject-width-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media (min-width: 40.0625em) {
+  .greenwebproject-width-container { padding: 0 30px; }
+}
+
+/* ==================== PHASE BANNER ==================== */
+.greenwebproject-phase-banner {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #b1b4b6;
+}
+.greenwebproject-phase-banner__content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.14286;
+}
+.greenwebproject-tag {
+  display: inline-block;
+  padding: 2px 8px 3px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #1d70b8;
+}
+
+/* ==================== BREADCRUMBS ==================== */
+.greenwebproject-breadcrumbs {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #505a5f;
+  font-size: 16px;
+  line-height: 1.25;
+}
+.greenwebproject-breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.greenwebproject-breadcrumbs__list-item {
+  display: flex;
+  align-items: center;
+}
+.greenwebproject-breadcrumbs__list-item + .greenwebproject-breadcrumbs__list-item::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  margin: 1px 10px 0;
+  border-top: 2px solid #505a5f;
+  border-right: 2px solid #505a5f;
+  transform: rotate(45deg);
+}
+.greenwebproject-breadcrumbs__link {
+  color: #0b0c0c;
+  font-size: 14px;
+}
+
+/* ==================== MAIN WRAPPER ==================== */
+.greenwebproject-main-wrapper {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: #ffffff;
+}
+@media (min-width: 40.0625em) {
+  .greenwebproject-main-wrapper { padding-top: 40px; padding-bottom: 60px; }
+}
+
+/* ==================== GRID ==================== */
+.greenwebproject-grid-row {
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.greenwebproject-grid-row::after { content: ''; display: table; clear: both; }
+
+.greenwebproject-grid-column-two-thirds {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px;
+}
+.greenwebproject-grid-column-one-third {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px;
+}
+@media (min-width: 40.0625em) {
+  .greenwebproject-grid-column-two-thirds { width: 66.6667%; }
+  .greenwebproject-grid-column-one-third { width: 33.3333%; }
+}
+
+/* ==================== TYPOGRAPHY ==================== */
+.greenwebproject-heading-xl {
+  color: #0b0c0c;
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.09375;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+@media (min-width: 40.0625em) {
+  .greenwebproject-heading-xl { font-size: 48px; line-height: 1.04167; }
+}
+
+.greenwebproject-heading-l {
+  color: #0b0c0c;
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.04167;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+@media (min-width: 40.0625em) {
+  .greenwebproject-heading-l { font-size: 36px; line-height: 1.11111; }
+}
+
+.greenwebproject-heading-m {
+  color: #0b0c0c;
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.11111;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+@media (min-width: 40.0625em) {
+  .greenwebproject-heading-m { font-size: 24px; line-height: 1.04167; }
+}
+
+.greenwebproject-heading-s {
+  color: #0b0c0c;
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+@media (min-width: 40.0625em) {
+  .greenwebproject-heading-s { font-size: 19px; line-height: 1.31579; }
+}
+
+.greenwebproject-body, .greenwebproject-body-m {
+  color: #0b0c0c;
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+@media (min-width: 40.0625em) {
+  .greenwebproject-body, .greenwebproject-body-m { font-size: 19px; line-height: 1.31579; }
+}
+
+.greenwebproject-body-s {
+  color: #0b0c0c;
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.14286;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+@media (min-width: 40.0625em) {
+  .greenwebproject-body-s { font-size: 16px; line-height: 1.25; }
+}
+
+.greenwebproject-caption-xl {
+  color: #505a5f;
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.04167;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* ==================== LISTS ==================== */
+.greenwebproject-list {
+  color: #0b0c0c;
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+@media (min-width: 40.0625em) {
+  .greenwebproject-list { font-size: 19px; line-height: 1.31579; }
+}
+.greenwebproject-list--bullet { list-style-type: disc; }
+.greenwebproject-list--number { list-style-type: decimal; }
+.greenwebproject-list--spaced > li { margin-bottom: 10px; }
+.greenwebproject-list > li { margin-bottom: 5px; }
+
+/* ==================== SECTION BREAK ==================== */
+.greenwebproject-section-break {
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid #b1b4b6;
+}
+.greenwebproject-section-break--xl { margin-top: 50px; margin-bottom: 50px; }
+.greenwebproject-section-break--l { margin-top: 40px; margin-bottom: 40px; }
+.greenwebproject-section-break--m { margin-top: 30px; margin-bottom: 30px; }
+.greenwebproject-section-break--visible { border-bottom: 1px solid #b1b4b6; }
+
+/* ==================== BUTTON ==================== */
+.greenwebproject-button {
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 22px;
+  padding: 8px 10px 7px;
+  border: 2px solid transparent;
+  border-radius: 0;
+  color: #ffffff;
+  background-color: #00703c;
+  box-shadow: 0 2px 0 #002d18;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-appearance: none;
+}
+@media (min-width: 40.0625em) {
+  .greenwebproject-button { width: auto; }
+}
+.greenwebproject-button:link, .greenwebproject-button:visited { color: #ffffff; }
+.greenwebproject-button:hover { background-color: #005a30; }
+.greenwebproject-button:focus {
+  border-color: #fd0;
+  outline: 3px solid transparent;
+  box-shadow: inset 0 0 0 1px #fd0;
+  color: #0b0c0c;
+  background-color: #fd0;
+  border-color: #fd0;
+}
+
+/* ==================== INSET TEXT ==================== */
+.greenwebproject-inset-text {
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  clear: both;
+  border-left: 10px solid #b1b4b6;
+}
+@media (min-width: 40.0625em) {
+  .greenwebproject-inset-text { font-size: 19px; line-height: 1.31579; }
+}
+
+/* ==================== WARNING TEXT ==================== */
+.greenwebproject-warning-text {
+  position: relative;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+.greenwebproject-warning-text__icon {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #0b0c0c;
+  line-height: 35px;
+  vertical-align: middle;
+}
+.greenwebproject-warning-text__text {
+  font-weight: 700;
+  font-size: 19px;
+}
+
+/* ==================== CONTENTS LIST ==================== */
+.gem-c-contents-list {
+  font-size: 16px;
+  margin-bottom: 30px;
+  padding: 15px 20px 15px 15px;
+  border: 1px solid #b1b4b6;
+  background: #f3f2f1;
+}
+@media (min-width: 40.0625em) {
+  .gem-c-contents-list { font-size: 16px; }
+}
+.gem-c-contents-list__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0b0c0c;
+  margin: 0 0 10px 0;
+}
+.gem-c-contents-list__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.gem-c-contents-list__list-item {
+  padding: 5px 0;
+  border-top: 1px solid #b1b4b6;
+  font-size: 16px;
+  color: #0b0c0c;
+}
+.gem-c-contents-list__list-item:first-child { border-top: none; }
+.gem-c-contents-list__link {
+  color: #1d70b8;
+  text-decoration: underline;
+  font-size: 16px;
+}
+.gem-c-contents-list__link:hover { color: #003078; }
+.gem-c-contents-list__list-item--active .gem-c-contents-list__link {
+  color: #0b0c0c;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: default;
+}
+.gem-c-contents-list__number,
+.gem-c-contents-list__dash {
+  color: #505a5f;
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.gem-c-contents-list__list-item--active span[aria-current] {
+  color: #0b0c0c;
+  font-weight: 700;
+}
+
+/* ==================== PAGINATION (PREV/NEXT) ==================== */
+.gem-c-pagination {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #b1b4b6;
+}
+.gem-c-pagination__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.gem-c-pagination__item {
+  max-width: 220px;
+}
+.gem-c-pagination__item--previous { margin-right: auto; }
+.gem-c-pagination__item--next { margin-left: auto; text-align: right; }
+.gem-c-pagination__link {
+  display: block;
+  text-decoration: none;
+  color: #1d70b8;
+  font-size: 19px;
+}
+.gem-c-pagination__link:hover { color: #003078; text-decoration: underline; }
+.gem-c-pagination__link-label {
+  display: block;
+  font-weight: 700;
+  font-size: 19px;
+}
+.gem-c-pagination__link-divider { font-size: 19px; }
+.gem-c-pagination__link-title {
+  font-size: 16px;
+  color: #505a5f;
+  display: block;
+}
+
+.gem-c-pagination__item--previous .gem-c-pagination__link::before {
+  content: '◄ ';
+  font-size: 14px;
+}
+.gem-c-pagination__item--next .gem-c-pagination__link::after {
+  content: ' ►';
+  font-size: 14px;
+}
+
+/* ==================== RELATED NAV (SIDEBAR) ==================== */
+.gem-c-related-navigation {
+  border-top: 2px solid #1d70b8;
+  padding-top: 15px;
+  margin-top: 10px;
+}
+.gem-c-related-navigation__main-heading {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #0b0c0c;
+}
+.gem-c-related-navigation__sub-heading {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 15px 0 5px 0;
+  color: #505a5f;
+}
+.gem-c-related-navigation__link-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.gem-c-related-navigation__link-list li {
+  border-top: 1px solid #b1b4b6;
+  padding: 8px 0;
+}
+.gem-c-related-navigation__link-list li:first-child { border-top: none; }
+.gem-c-related-navigation__link {
+  font-size: 16px;
+  color: #1d70b8;
+  text-decoration: underline;
+}
+.gem-c-related-navigation__section-link--other {
+  font-size: 16px;
+}
+
+/* ==================== EXPLORE TOPIC ==================== */
+.gem-c-related-navigation .gem-c-related-navigation__section-link {
+  font-size: 16px;
+}
+
+/* ==================== METADATA ==================== */
+.app-c-publisher-metadata {
+  color: #505a5f;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border-top: 1px solid #b1b4b6;
+  padding-top: 10px;
+}
+.app-c-publisher-metadata__term {
+  font-weight: 700;
+  margin-right: 5px;
+}
+.app-c-publisher-metadata__definition {
+  color: #1d70b8;
+}
+
+/* ==================== FOOTER ==================== */
+.greenwebproject-footer {
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.14286;
+  border-top: 1px solid #b1b4b6;
+  color: #0b0c0c;
+  background: #f3f2f1;
+  padding: 25px 0;
+}
+@media (min-width: 40.0625em) {
+  .greenwebproject-footer { font-size: 16px; line-height: 1.25; padding: 40px 0 25px; }
+}
+
+.greenwebproject-footer__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+.greenwebproject-footer__meta-item { margin: 0; }
+.greenwebproject-footer__meta-item--grow { flex: 1; }
+
+.greenwebproject-footer__licence-logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 41px;
+  height: 17px;
+  margin-right: 10px;
+}
+.greenwebproject-footer__licence-description {
+  display: inline;
+  vertical-align: top;
+  font-size: 14px;
+  color: #505a5f;
+}
+.greenwebproject-footer__link {
+  color: #0b0c0c;
+}
+.greenwebproject-footer__link:hover { color: #0b0c0c; }
+
+.greenwebproject-footer__copyright-logo {
+  display: inline-block;
+  min-width: 125px;
+  padding-top: 105px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 483.2 195.7' height='17' width='41'%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-size: 125px auto;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #0b0c0c;
+  text-decoration: none;
+}
+
+/* Simple crown copyright */
+.greenwebproject-footer__copyright-notice {
+  font-size: 14px;
+  color: #505a5f;
+  text-align: right;
+}
+
+/* ==================== FOOTER NAV ==================== */
+.greenwebproject-footer__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.greenwebproject-footer__section { flex: 1 1 200px; }
+.greenwebproject-footer__heading {
+  font-size: 16px;
+  font-weight: 700;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #b1b4b6;
+}
+.greenwebproject-footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.greenwebproject-footer__list li { margin-bottom: 8px; }
+.greenwebproject-footer__link {
+  font-size: 14px;
+  color: #0b0c0c;
+  text-decoration: underline;
+}
+.greenwebproject-footer__link:hover { text-decoration: none; }
+
+/* ==================== ARTICLE BODY ==================== */
+.gem-c-govspeak h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #0b0c0c;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #b1b4b6;
+}
+@media (min-width: 40.0625em) {
+  .gem-c-govspeak h2 { font-size: 27px; }
+}
+.gem-c-govspeak h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #0b0c0c;
+}
+.gem-c-govspeak p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #0b0c0c;
+}
+@media (min-width: 40.0625em) {
+  .gem-c-govspeak p { font-size: 19px; }
+}
+.gem-c-govspeak ul {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  color: #0b0c0c;
+}
+@media (min-width: 40.0625em) {
+  .gem-c-govspeak ul { font-size: 19px; }
+}
+.gem-c-govspeak ul li { margin-bottom: 5px; }
+.gem-c-govspeak a { color: #1d70b8; }
+.gem-c-govspeak a:hover { color: #003078; }
+
+/* ==================== FORM / INPUT ==================== */
+.greenwebproject-form-group {
+  margin-bottom: 20px;
+}
+.greenwebproject-label {
+  display: block;
+  font-size: 19px;
+  font-weight: 400;
+  color: #0b0c0c;
+  margin-bottom: 5px;
+}
+.greenwebproject-label--m { font-weight: 700; }
+.greenwebproject-hint {
+  display: block;
+  font-size: 19px;
+  color: #505a5f;
+  margin-bottom: 5px;
+}
+.greenwebproject-input {
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.25;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  margin-top: 0;
+  padding: 5px;
+  border: 2px solid #0b0c0c;
+  border-radius: 0;
+  appearance: none;
+  background-color: #ffffff;
+}
+.greenwebproject-input:focus {
+  outline: 3px solid #fd0;
+  outline-offset: 0;
+  box-shadow: inset 0 0 0 2px;
+}
+.greenwebproject-input--error { border-color: #d4351c; }
+
+.greenwebproject-error-summary {
+  color: #0b0c0c;
+  padding: 15px;
+  margin-bottom: 30px;
+  border: 4px solid #d4351c;
+  background-color: #ffffff;
+}
+.greenwebproject-error-summary__title {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  color: #0b0c0c;
+}
+.greenwebproject-error-summary__body { font-size: 16px; }
+.greenwebproject-error-summary__list { margin: 0; padding-left: 20px; }
+.greenwebproject-error-summary__list a { color: #d4351c; font-weight: 700; }
+.greenwebproject-error-message {
+  display: block;
+  font-size: 19px;
+  font-weight: 700;
+  color: #d4351c;
+  margin-bottom: 5px;
+}
+
+/* ==================== VISUALLY HIDDEN ==================== */
+.greenwebproject-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ==================== TABS ==================== */
+.greenwebproject-tabs { margin-top: 30px; margin-bottom: 30px; }
+
+/* ==================== SPACING HELPERS ==================== */
+.greenwebproject-\!-margin-bottom-0 { margin-bottom: 0 !important; }
+.greenwebproject-\!-margin-bottom-4 { margin-bottom: 20px !important; }
+.greenwebproject-\!-margin-bottom-6 { margin-bottom: 30px !important; }
+.greenwebproject-\!-margin-top-6 { margin-top: 30px !important; }
+
+/* ==================== ADMIN STYLES ==================== */
+.admin-header {
+  background: #0b0c0c;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.admin-header a { color: #ffffff; text-decoration: none; font-size: 20px; font-weight: 700; }
+.admin-header a:hover { text-decoration: underline; }
+.admin-nav a {
+  color: #b1b4b6;
+  text-decoration: none;
+  font-size: 14px;
+  margin-left: 20px;
+}
+.admin-nav a:hover { color: #ffffff; text-decoration: underline; }
+
+.admin-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 30px;
+}
+
+.admin-welcome-box {
+  background: #f3f2f1;
+  border-left: 5px solid #1d70b8;
+  padding: 30px;
+  margin-top: 30px;
+}
+.admin-welcome-box h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #0b0c0c;
+}
+.admin-welcome-box p { font-size: 16px; color: #505a5f; margin: 0; }
+
+.greenwebproject-tag--green { background-color: #00703c; }
+
+/* ==================== FOOTER EXTRAS ==================== */
+.greenwebproject-footer__section-break {
+  margin: 30px 0;
+  border: 0;
+  border-bottom: 1px solid #b1b4b6;
+}
+.greenwebproject-footer__list--columns-2 {
+  -webkit-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+  padding-left: 0;
+  list-style: none;
+}
+@media (max-width: 40.0625em) {
+  .greenwebproject-footer__list--columns-2 { column-count: 1; }
+}
+.greenwebproject-footer__list-item { display: block; margin-bottom: 8px; }
+
+/* ==================== FORM GROUP ERROR STATE ==================== */
+.greenwebproject-form-group--error {
+  padding-left: 15px;
+  border-left: 5px solid #d4351c;
+}
+.greenwebproject-form-group--error .greenwebproject-label { font-weight: 700; }
+
+/* ==================== MAIN WRAPPER WHITE BG ==================== */
+.greenwebproject-main-wrapper {
+  background-color: #ffffff;
+}
+
+/* ==================== BREADCRUMB BG ==================== */
+.greenwebproject-breadcrumbs-wrapper {
+  background-color: #ffffff;
+  padding: 10px 0;
+}
